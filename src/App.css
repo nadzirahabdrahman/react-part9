@@ -1,13 +1,13 @@
-.frame {
+/* .frame {
   background-color: whitesmoke;
   width: 60%;
   border: 5px solid gray;
-  border-radius: 5px;
-  margin: auto; /* to center the frame */
-  padding: 10px;
-}
+  border-radius: 5px;  */
+  /* margin: auto; */ /*to center the frame */
+  /* padding: 10px;
+} */
 
-.title {
+/* .title {
   display: flex;
   justify-content: center;
 }
@@ -42,4 +42,4 @@
 
 .add-icon {
   color: white;
-}
+} */
