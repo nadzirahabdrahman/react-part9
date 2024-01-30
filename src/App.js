@@ -1,14 +1,22 @@
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
   return (
     <>
-      <h1>To-buy-list</h1>
-
-      <div className='card flex-apart'>
-        <input name='list' type='text'/>
-        <button>Add</button>
+    <div className='frame'>
+      <div className='title'>
+        <h1>To-buy-list</h1>
       </div>
+
+      <div className='add-list'>
+        <input className='input-add' type='text'/>
+        <button className='button-add' type='button' onClick="alert('Added!')">
+          +
+        </button>
+      </div>
+      
+    </div>
     </>
   );
 }
