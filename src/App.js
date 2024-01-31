@@ -55,16 +55,14 @@ function App() {
 
   return (
     <>
-    <div className='frame'>
-      <div className='title'>
-        <h1>To-buy-list</h1>
-      </div>
+    <div>
+      <h1>to-buy-list</h1>
 
-      <div className='add-list'>
+      <div>
         <form onSubmit={addItem}>
-          <input className='input-add' type='text' name='item' placeholder='What item?'/> {/* name='item' is a key */}
+          <input type='text' name='item' placeholder='What item?'/> {/* name='item' is a key */}
           &nbsp;
-          <button type='submit'>Add</button>
+          <button className='button-add' type='submit'>add</button>
         </form>
       </div>
       {/* display itemList that has been added */}
@@ -72,12 +70,14 @@ function App() {
         itemList.map(function(val, index) {
           // index: nth of array for each val(value)
           return (
-            <div key={index}>
-              <span>{val.item}</span> {/* value/name of the itemList */}
+            <div className='frame-list' key={index}>
+              <input value={val.item}/> {/* value/name of the itemList */}
               &nbsp;
-              <button onClick={checkedItem}>Checked</button>
-              &nbsp;
-              <button onClick={deleteItem} value={val.item}>Delete</button>
+              <div>
+                <button className='button-check' onClick={checkedItem}>Checked</button>
+                &nbsp;
+                <button className='button-del' onClick={deleteItem} value={val.item}>Delete</button>
+              </div>
             </div>
           );
         })

@@ -1,45 +1,44 @@
-/* .frame {
-  background-color: whitesmoke;
-  width: 60%;
-  border: 5px solid gray;
-  border-radius: 5px;  */
-  /* margin: auto; */ /*to center the frame */
-  /* padding: 10px;
-} */
+h1 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-/* .title {
+form {
   display: flex;
   justify-content: center;
 }
 
-.add-list {
-  display: flex;
-  justify-content: center;
-}
-
-.input-add {
-  border: none;
+input {
+  width: 50vh;
   padding: 10px;
-  margin: 10px;
+  margin: 2px;
+  border: 1px solid gray;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 7px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: white;
-  border-radius: 5px;
-  box-shadow: 4px 4px 4px gray;
 }
 
 .button-add {
-  background-color: rgb(54, 193, 54);
   padding: 10px;
-  margin: 10px;
+  border: none;
+  border-radius: 7px;
+  margin: 2px;
+  background-color: green;
   width: 10vh;
   color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bolder;
-  font-size: larger;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.add-icon {
-  color: white;
-} */
+.frame-list {
+  border: none;
+  box-shadow: 2px 2px 2px 2px gray;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vh;
+}
