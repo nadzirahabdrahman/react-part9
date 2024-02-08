@@ -1,5 +1,9 @@
 import './App.css';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons'; 
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
@@ -55,34 +59,46 @@ function App() {
 
   return (
     <>
-    <div>
-      <h1>to-buy-list</h1>
+    <div className='div-1'>
+      <h1 className='title'>to-buy-list</h1>
 
-      <div>
-        <form onSubmit={addItem}>
-          <input type='text' name='item' placeholder='What item?'/> {/* name='item' is a key */}
+      <form onSubmit={addItem}>
+        <div className='div-2'>
+          <input className='item-add' type='text' name='item' placeholder='What item?'/> {/* name='item' is a key */}
           &nbsp;
-          <button className='button-add' type='submit'>add</button>
-        </form>
-      </div>
-      {/* display itemList that has been added */}
-      {
-        itemList.map(function(val, index) {
-          // index: nth of array for each val(value)
-          return (
-            <div className='frame-list' key={index}>
-              <input value={val.item}/> {/* value/name of the itemList */}
-              &nbsp;
-              <div>
-                <button className='button-check' onClick={checkedItem}>Checked</button>
-                &nbsp;
-                <button className='button-del' onClick={deleteItem} value={val.item}>Delete</button>
-              </div>
-            </div>
-          );
-        })
-      }
-    </div>
+          <button className='button-add' type='submit'>
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+        </div> {/* END OF DIV-2 */}
+
+
+        {/* display itemList */}
+
+        {
+          itemList.map(function(val, index) {
+            // index: nth of array for each val(value)
+            return (
+              <div className='div-3' key={index}>
+                {/* <input className='item-display' value={val.item} readOnly/> value/name of the itemList
+                &nbsp; */}
+                  <p className='item-display'>{val.item}</p>
+                  &nbsp;
+
+                <div>
+                  <button className='button-check' onClick={checkedItem}>
+                    <FontAwesomeIcon icon={faCheck} />
+                  </button>
+                  &nbsp;
+                  <button className='button-del' onClick={deleteItem} value={val.item}>
+                    <FontAwesomeIcon icon={faTrash} />
+                  </button>
+                </div>
+              </div> // END OF DIV-3 
+            );
+          })
+        }
+      </form> {/* END OF FORM */}
+    </div> {/* END OF DIV-1 */}
     </>
   );
 }
